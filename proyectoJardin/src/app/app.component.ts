@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { InicioComponent } from '../../src/app/components/inicio/inicio.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proyectoJardin';
+
+  
+
+  ngOnInit() {
+    
+  }
+
+  scrollInicio(varElementoInicio){
+    var xa = new InicioComponent();
+    xa.scroll(varElementoInicio);
+  }
+
 }

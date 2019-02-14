@@ -14,16 +14,44 @@ body {
   display: block;
 }
 
+.phoneNumber{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: .1rem;
+  color: white;
+  text-align: right;
+  padding-right: 3.4rem;
+  text-shadow: .1rem .1rem .8rem black;
+  background: transparent!important;
+}
+
+.container-fluid {
+  padding-right: 0px!important;
+  padding-left: 0px!important;
+}
+
 .navbar {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: .9rem;
+  font-size: 1.2rem;
   letter-spacing: .1rem;
-  background: rgba(0, 0, 0, .6)!important;
+  background: transparent!important;
+  text-shadow: .1rem .1rem .8rem black;
+  /* padding: 0rem 1rem !important; */
+  padding: 2rem 3rem !important;
+}
+
+.navbar a {
+  cursor: pointer;
+}
+
+.carousel .btn {
+  font-size: 1.4rem!important;
 }
 
 .navbar-brand img {
-  height: 2rem;
+  height: 2.7rem;
 }
 
 .navbar-nav li {
@@ -35,13 +63,15 @@ body {
 }
 .navbar-dark .navbar-nav .nav-link.active, 
 .navbar-dark .navbar-nav .nav-item .nav-link.hover {
-  color: #1ebba3 !important;
+  color: white !important;
 }
 
 /*============= Slider =============*/
 
 .carousel-item{
   background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 
 .carousel-item{
@@ -112,10 +142,42 @@ body {
 
   /*============= Portfolio =============*/
   
+
   .portfolio img {
     max-width: 100%;
     transition: transform .5s ease;
+    position: relative;
+    display: inline-block;
+    text-align: center;
   }
+
+  .texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.portfolio h1 {
+  color: white;
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  text-shadow: .1rem .1rem .8rem black;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.portfolio h3 {
+  color: white;
+  font-size: 2rem;
+  text-shadow: .1rem .1rem .5rem black;
+  padding-bottom: 1.6rem;
+}
+
   .row.no-padding [class*=col-] {
     padding: 0;
   }
@@ -130,6 +192,23 @@ body {
 
   .card {
     margin: 2rem;
+  }
+
+  .jumbotron {
+    background-color: transparent!important;
+    padding: 2rem 1rem!important;
+    padding-bottom: 0rem!important;
+    margin-bottom: 0rem!important;
+  }
+
+  .jumbotron h3 {
+    padding-bottom: 1.9rem;
+  }
+
+  /*--- Team ---*/
+
+  .team {
+    padding-top: 2rem;
   }
 
   /*--- Contact ---*/

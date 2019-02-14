@@ -12,4 +12,9 @@ export class InicioComponent implements OnInit {
   ngOnInit() {
   }
 
+  scroll(divElemento) {
+    var divEle = document.getElementById(divElemento);
+    divEle.scrollIntoView({block: "start",behavior: "smooth"});
+  } 
+
 }

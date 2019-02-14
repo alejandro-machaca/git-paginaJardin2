@@ -1,25 +1,38 @@
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="10000">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active" style="background-image: url(./assets/css/img/computers.png);">
+    <div class="carousel-item active" style="background-image: url(./assets/css/img/poda1.jpg);">
       <div class="carousel-caption narrow text-center">
-        <h1>Welcome To Nuno</h1>
-        <h3>Animated Bootstrap Theme</h3>
-        <a class="btn btn-outline-light btn-lg" href="#score">Get Started</a>
+        <h1>Mantenimiento y diseño de Jardines</h1>
+        <h3>Palma de mallorca Islas Baleares</h3>
+        <a class="btn btn-outline-light btn-lg" href="#score" (click)="scroll('portafolio')">Servicios</a>
+        <a class="btn btn-outline-light btn-lg" href="#score" (click)="scroll('team')">Contactos</a>
       </div>
     </div>
-    
-    <div class="carousel-item" style="background-image: url(./assets/css/img/computers-2.png);">
+
+    <div class="carousel-item" style="background-image: url(./assets/css/img/jardin3.jpg);">
+      <div class="carousel-caption narrow text-center">
+        <h1>Mantenimiento y diseño de Jardines</h1>
+        <h3>Palma de mallorca Islas Baleares</h3>
+        <a class="btn btn-outline-light btn-lg" href="#score" (click)="scroll('portafolio')">Servicios</a>
+        <a class="btn btn-outline-light btn-lg" href="#score" (click)="scroll('team')">Contactos</a>
+      </div>
     </div>
 
-    <div class="carousel-item" style="background-image: url(./assets/css/img/computers-3.png);">
+    <div class="carousel-item" style="background-image: url(./assets/css/img/jardin5.jpg);">
+      <div class="carousel-caption narrow text-center">
+        <h1>Mantenimiento y diseño de Jardines</h1>
+        <h3>Palma de mallorca Islas Baleares</h3>
+        <a class="btn btn-outline-light btn-lg" href="#score" (click)="scroll('portafolio')">Servicios</a>
+        <a class="btn btn-outline-light btn-lg" href="#score" (click)="scroll('team')">Contactos</a>
+      </div>
     </div>
-    
+
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -33,12 +46,13 @@
 
 <!-- Start Portafolio Section -->
 
-<div class="portafolio">
+<div id='portafolio' class="portafolio">
   <div class="jumbotron container-fluid">
     
     <div class="col-12 text-center">
-      <h3 class="heading">Portafolio</h3>
+      <h3 class="heading">Servicios</h3>
       <div class="heading-underline"></div>
+      <!-- <div class="heading-underline"></div> -->
     </div>
 
     <div class="row no-padding">
@@ -46,7 +60,10 @@
       <div class="col-sm-4">
         <div class="portfolio">
           <a href="#" target="_blank">
-            <img src="./assets/css/img/portfolio/1.png">
+            <img src="./assets/css/img/portfolio2/poda.jpg">
+            <div class="centrado">
+              <h1>Poda y tala de pinos y palmeras</h1>
+            </div>
           </a>
         </div>
       </div>
@@ -54,7 +71,10 @@
       <div class="col-sm-4">
         <div class="portfolio">
           <a href="#" target="_blank">
-            <img src="./assets/css/img/portfolio/2.png">
+            <img src="./assets/css/img/portfolio2/mantenimiento.jpg">
+            <div class="centrado">
+              <h1>Jardinería en general</h1>
+            </div>
           </a>
         </div>
       </div>
@@ -62,7 +82,10 @@
       <div class="col-sm-4">
         <div class="portfolio">
           <a href="#" target="_blank">
-            <img src="./assets/css/img/portfolio/3.png">
+            <img src="./assets/css/img/portfolio2/fumigar2.jpg">
+            <div class="centrado">
+              <h1>Fumigación y limpieza de Jardines</h1>
+            </div>
           </a>
         </div>
       </div>
@@ -70,7 +93,10 @@
       <div class="col-sm-4">
         <div class="portfolio">
           <a href="#" target="_blank">
-            <img src="./assets/css/img/portfolio/4.png">
+            <img src="./assets/css/img/portfolio2/piscina2.jpg">
+            <div class="centrado">
+                <h1>Manteniminiento de Piscinas</h1>
+              </div>
           </a>
         </div>
       </div>
@@ -78,7 +104,10 @@
       <div class="col-sm-4">
         <div class="portfolio">
           <a href="#" target="_blank">
-            <img src="./assets/css/img/portfolio/5.png">
+            <img src="./assets/css/img/portfolio2/diseño_jardin.jpg">
+            <div class="centrado">
+              <h1>Diseño de Jardines</h1>
+            </div>
           </a>
         </div>
       </div>
@@ -86,20 +115,17 @@
       <div class="col-sm-4">
         <div class="portfolio">
           <a href="#" target="_blank">
-            <img src="./assets/css/img/portfolio/6.png">
+            <img src="./assets/css/img/portfolio2/cespedSintetico.jpg">
+            <div class="centrado">
+                <h1>Y muchos otros servicios mas..</h1>
+              </div>
           </a>
         </div>
       </div>
 
     </div>
 
-    <div class="narrow text-center">
-      <div class="col-12">
-        <p class="lead">Want to learn how to develop Bootstrap Themes?</p>
-        <a class="btn btn-secondary btn-md" href="#" target="_blank">Bootstrap Course</a>
-      </div>
-
-    </div>
+    
 
   </div>
 </div>
@@ -108,13 +134,48 @@
 
 <!-- Start Team Section -->
 
-<div class="team">
+<div id='team' class="team">
 
   <div class="col-12 text-center">
-    <h3 class="heading">Team</h3>
+    <h3 class="heading">Contacto</h3>
     <div class="heading-underline"></div>
   </div>
   
+  <div class="padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+            <h4>Datos de Contacto</h4>
+            <p>
+              Puedes llamarnos sin ningun compromiso al siguiente numero de telefono:
+            </p>
+            <p>
+              <b>(888) 888-8888</b> 
+            </p>
+            <p>
+              Tambien puedes comunicarte con nosotros mediante el siguiente correo electronico: 
+            </p>
+            <p>
+                <b>email@gmail.com</b> 
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 justify-content-center">
+            <img src="./assets/css/img/callCenter.png" style="max-width:100%" class="img-responsive">
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+            <h4>Ubicación</h4>
+            <p>
+              Nos pueden encontrar en la siguiente direccion.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 justify-content-center">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d326.4452912310315!2d2.678391608014257!3d39.59447362007658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2ses!4v1550085644636" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--
   <div class="row padding">
 
     <div class="col-md-6">
@@ -138,7 +199,7 @@
     </div>
 
   </div>
-
+-->
 </div>
 
 <!-- End Team Section -->
@@ -149,19 +210,19 @@
     <div class="row justify-content-center">
 
       <div class="col-md-5 text-center">
-        <img src="./assets/css/img/nuno.png">
-        <p>At our core is a collection of design and development solutions that represent everything your business needs to compete in the modern marketplace.</p>
-        <strong>Contact info</strong>
-        <p>(888) 888-8888 <br> email@nuno.com</p>
+        <img src="./assets/css/img/iconoTitulo.png">
+        <p>Especialistas en poda de arboles, palmas y jardineria en general. Amplio catálogo y variedad de servicios. LLámenos sin compromiso y le atenderemos encantados.</p>
+        <strong>Informacion de contacto</strong>
+        <p>(888) 888-8888 <br> email@hotmail.com</p>
 
-        <a href="" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://www.facebook.com/alejandro.machacanavia" target="_blank"><i class="fab fa-facebook-square"></i></a>
         <a href="" target="_blank"><i class="fab fa-twitter-square"></i></a>
         <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
-
+      <!--
       <hr class="socket">
       &copy; Nuno Theme.
-
+      -->
     </div>
   </footer>
 </div>

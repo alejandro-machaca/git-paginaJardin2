@@ -13,21 +13,34 @@
 <!--- Start Home Section -->
 <div id="home">
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="index.html"><img src="./assets/css/img/nuno.png" style="width:50%"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
-        <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  <div class="container-fluid fixed-top">
+    <div class="row navbar-dark">
+      <div class="col-sm-12">
+          <div class="phoneNumber">
+              <i class="fas fa-phone"></i> (888) 888-8888
+          </div>
       </div>
-    </div>    
-  </nav>
+    </div>
+      
+        <nav class="navbar navbar-expand-lg navbar-dark">
+        
+            <a class="navbar-brand" href="index.html"><img src="./assets/css/img/iconoTitulo2.png" style="width:50%"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" (click)="scrollInicio('portafolio')" >Servicios</a>
+                <a class="nav-item nav-link active" (click)="scrollInicio('team')" >Contacto</a>
+                <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+              </div>
+            </div>    
+          </nav>
+  </div>
+  
   <!-- End Navigation -->
 
   

@@ -1,4 +1,4 @@
-<div class="contacto" id="contacto">
+<div class="datos" id="datos">
   <div class="row padding">
     <div class="col-md-6">
       <div class="card text-center">
@@ -9,30 +9,44 @@
     <div class="col-md-6">
       <div class="card-body">
         <h5 class="card-title">CONTACTA CON NOSOTROS</h5>
-        
-        <form>
+
+        <div class="message success" *ngIf="status == 'success'">
+          El Mensaje se ha enviado exitosamente.
+        </div>
+
+        <div class="message failed" *ngIf="status == 'failed'">
+          Existio un problema al enviar el mensaje.
+        </div>
+
+        <!--TODO: Realizar validaciones al campo para que no puedan realizar sqlInjection y otros -->
+        <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
           <div class="form-group">
             <label for="exampleInputEmail1">Nombre: </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su nombre">
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="objTbmensaje.colNombres" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su nombre" required>
+            <span *ngIf="name.touched && !name.valid" style="color: rgb(223, 39, 32);font-size: 18px;"> <strong> Para enviar anote un nombre </strong> </span>
             <small id="emailHelp" class="form-text text-muted">Nosotros nunca compartiremos su informacion personal.</small>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Correo Electronico: </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su correo electronico">
+            <input type="text" name="correo" #correo="ngModel" [(ngModel)]="objTbmensaje.colEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su correo electronico" required>
+            <span *ngIf="correo.touched && !correo.valid" style="color: rgb(223, 39, 32);font-size: 18px;"> <strong> Para enviar escriba su correo electronico </strong> </span>
             <small id="emailHelp" class="form-text text-muted"></small>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Telefono: </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su numero de telefono o celular">
+            <input type="text" name="telefono" #telefono="ngModel" [(ngModel)]="objTbmensaje.colTelefono"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su numero de telefono o celular" required>
+            <span *ngIf="telefono.touched && !telefono.valid" style="color: rgb(223, 39, 32);font-size: 18px;"> <strong> Para enviar anote el numero de Celular o telefono </strong> </span>
             <small id="emailHelp" class="form-text text-muted">Nosotros nos comunicaremos con usted</small>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Comentario: </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+            <input type="text" name="comentario" #comentario="ngModel" [(ngModel)]="objTbmensaje.colComentarios" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required>
+            <span *ngIf="comentario.touched && !comentario.valid" style="color: rgb(223, 39, 32);font-size: 18px;"> <strong> Para enviar anote su consulta o comentario para que podamos responderle lo mas antes posible </strong> </span>
             <small id="emailHelp" class="form-text text-muted">Si tiene alguna consulta o comentario le responderemos lo mas rapidamente posible.</small>
           </div>
 
-          <button type="submit" class="btn btn-primary">Enviar ahora</button>
+          <button type="submit" [disabled]="!projectForm.form.valid"  class="btn btn-primary">Enviar ahora</button>
+          <small id="emailHelp" class="form-text text-muted">Ingrese sus datos para poder enviar.</small>
         </form>
 
         <br>

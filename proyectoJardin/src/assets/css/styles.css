@@ -267,6 +267,48 @@ body {
     padding-top: 7rem;
   }
 
+  .datos {
+    background: #76b852;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8DC26F, #76b852);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    padding-top: 7rem;
+  }
+
+  .info {
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding-top: 7rem;
+  }
+  .contacto .btn-primary[disabled] {
+    opacity: 0.4!important;
+  }
+
+  .datos .btn-primary[disabled] {
+    opacity: 0.4!important;
+  }
+
+  .message{
+    padding: 5px;
+    width: 50%;
+    border: 1px solid #eee;
+  }
+
+  .success {
+    background: green;
+    color: white;
+  }
+
+  .failed {
+    background: red;
+    color: white;
+  }
+
+  .info .card {
+    margin : 0rem;
+  }
   
 
   @media (max-width: 767px) {
@@ -288,6 +330,10 @@ body {
     }
     p.lead {
       font-size: 1rem;
+    }
+
+    .message{
+      width: 100%;
     }
 
   }

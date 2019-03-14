@@ -1,0 +1,48 @@
+
+<div class="info" id="info">
+  <div class="row padding">
+    <div class="col-md-6">
+      
+      <div class="card-body">
+        <h2>Contactos</h2>
+        <h5 class="card-title">Lista de numeros telefonicos enviados por los clientes interesados en el servicio.</h5>
+      
+        <ul class="list-group">
+          <li *ngFor="let contacto of contactos" class="list-group-item d-flex justify-content-between align-items-center">
+              {{contacto.colContacto}}
+            <span class="badge badge-primary badge-pill">{{contacto.colFechaHora}}</span>
+          </li>
+        </ul>
+        
+      </div>
+
+    </div>
+    <!--TODO: Realizar validaciones al campo para que no puedan realizar sqlInjection y otros -->
+    <div class="col-md-6">
+
+      <div class="card-body">
+        <h2>Mensajes</h2>
+        <h5 class="card-title">Mensajes enviados por los clientes a la espera de una respuesta.</h5>
+        
+        
+        <div class="card-columns">
+            <div *ngFor="let mensaje of mensajes" class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{mensaje.colNombres}}</h5>
+                <p class="card-text">{{mensaje.colComentarios}}</p>
+                <p class="card-text"><small class="text-muted">{{mensaje.colTelefono}}<br>{{mensaje.colEmail}}<br>{{mensaje.colFechaHora}}</small></p>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

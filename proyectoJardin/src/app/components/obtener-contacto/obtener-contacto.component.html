@@ -5,19 +5,29 @@
         <img class="card-img-top" src="./assets/css/img/callcenter3.jpg">
       </div>
     </div>
-  
+    <!--TODO: Realizar validaciones al campo para que no puedan realizar sqlInjection y otros -->
     <div class="col-md-6">
       <div class="card-body">
         <h5 class="card-title">DEJA TU TELÉFONO Y TE LLAMAMOS NOSOTROS</h5>
         
-        <form>
+        <div class="message success" *ngIf="status == 'success'">
+          El Numero se ha enviado exitosamente.
+        </div>
+
+        <div class="message failed" *ngIf="status == 'failed'">
+          Existio un problema al enviar el numero.
+        </div>
+
+        <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
           <div class="form-group">
             <label for="exampleInputEmail1"></label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Numero de celular o telefono">
-            <small id="emailHelp" class="form-text text-muted">Nosotros no compartiremos tu numero con nadie.</small>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="contacto.colContacto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Numero de celular o telefono" required>
+            <span *ngIf="name.touched && !name.valid" style="color: rgb(223, 39, 32);font-size: 18px;"> <strong> Para enviar anote el numero de Celular o telefono </strong> </span>
+            <!--<small id="emailHelp" class="form-text text-muted">Nosotros no compartiremos tu numero con nadie.</small>-->
           </div>
           
-          <button type="submit" class="btn btn-primary">Enviar ahora</button>
+          <button type="submit" [disabled]="!projectForm.form.valid" class="btn btn-primary">Enviar ahora</button>
+          <small id="emailHelp" class="form-text text-muted">Ingrese sus datos para poder enviar.</small>
         </form>
         <br>
         <h6 class="card-subtitle mb-2 text-muted"></h6>
